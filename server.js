@@ -7,11 +7,19 @@ var User = require('./app/models/user');
 var mongoose   = require('mongoose');
 mongoose.connect('mongodb://localhost:27017/users');
 
+var allowCrossDomain = function(req, res, next) {
+    res.header('Access-Control-Allow-Origin', "*");
+    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+    res.header('Access-Control-Allow-Headers', 'Content-Type, X-Requested-With');
+    next();
+}
+
 // Configure app to use bodyParser(). This will let us get the data from a POST
+app.use(allowCrossDomain);
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-var port = process.env.PORT || 8080;
+var port = process.env.PORT || 3000;
 
 // Routes for our API - Express Router
 var router = express.Router();

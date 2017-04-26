@@ -1,9 +1,24 @@
 {
-    "name": "node-api",
-    "main": "server.js",
-    "dependencies": {
-        "express": "~4.0.0",
-        "mongoose": "~3.6.13",
-        "body-parser": "~1.0.1"
-    }
+  "name": "node-api",
+  "main": "server.js",
+  "dependencies": {
+    "express": "~4.0.0",
+    "mongoose": "~3.6.13",
+    "body-parser": "~1.0.1"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "description": "Build a RESTful API Using Node and Express 4",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/german-e-mas/restful-api-node.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/german-e-mas/restful-api-node/issues"
+  },
+  "homepage": "https://github.com/german-e-mas/restful-api-node#readme"
 }
